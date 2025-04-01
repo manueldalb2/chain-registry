@@ -5,7 +5,7 @@
   "network_type": "testnet",
   "pretty_name": "Juno Testnet",
   "chain_type": "cosmos",
-  "chain_id": "uni-6",
+  "chain_id": "uni-7",
   "bech32_prefix": "juno",
   "daemon_name": "junod",
   "node_home": "$HOME/.juno",
@@ -17,9 +17,9 @@
     "fee_tokens": [
       {
         "denom": "ujunox",
-        "low_gas_price": 0.003,
-        "average_gas_price": 0.0045,
-        "high_gas_price": 0.006
+        "low_gas_price": 0.08,
+        "average_gas_price": 0.1,
+        "high_gas_price": 0.11
       }
     ]
   },
@@ -32,65 +32,72 @@
   },
   "codebase": {
     "git_repo": "https://github.com/CosmosContracts/juno",
-    "recommended_version": "v15.0.0-alpha.2",
+    "recommended_version": "v27.0.0",
     "compatible_versions": [
-      "v15.0.0",
-      "v15.0.0-alpha.2"
+      "v27.0.0"
     ],
     "consensus": {
       "type": "tendermint",
-      "version": "0.34"
+      "version": "0.37.8"
     },
     "genesis": {
-      "genesis_url": "https://raw.githubusercontent.com/CosmosContracts/testnets/main/uni-6/genesis.json"
+      "genesis_url": "https://github.com/CosmosContracts/testnets/raw/refs/heads/main/uni-7/genesis.zip"
     },
     "sdk": {
       "type": "cosmos",
-      "version": "0.45"
+      "version": "0.47.15"
     },
     "ibc": {
       "type": "go",
-      "version": "4.3.1"
+      "version": "1.22.5"
     },
     "cosmwasm": {
-      "version": "0.31",
+      "version": "0.46",
       "enabled": true
     }
   },
   "peers": {
     "seeds": [
       {
-        "id": "babc3f3f7804933265ec9c40ad94f4da8e9e0017",
-        "address": "testnet-seed.rhinostake.com:12656",
-        "provider": "RHINO"
+        "id": "ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0",
+        "address": "testnet-seeds.polkachu.com:12656",
+        "provider": "Polkachu"
       }
     ],
     "persistent_peers": [
       {
-        "id": "c54bf418fb542634495f57a1e36c9bd057d55e1b",
-        "address": "5.161.80.115:26656",
-        "provider": "Reecepbcups"
+        "id": "38e2023a634844a5e1bb71836486bff3071e91c5",
+        "address": "65.109.23.114:12656",
+        "provider": "Polkachu"
       }
     ]
   },
   "apis": {
     "rpc": [
       {
+        "address": "https://juno-testnet-rpc.stakeandrelax.net",
+        "provider": "Stake&Relax 🦥"
+      },
+      {
         "address": "https://juno-testnet-rpc.polkachu.com",
         "provider": "Polkachu"
-      }
+      }      
     ],
     "rest": [
       {
-        "address": "https://juno-testnet-api.polkachu.com",
-        "provider": "Polkachu"
+        "address": "https://juno-testnet-api.stakeandrelax.net",
+        "provider": "Stake&Relax 🦥"
       },
       {
-        "address": "https://juno.api.t.stavr.tech",
-        "provider": "\ud83d\udd25STAVR\ud83d\udd25"
+        "address": "https://juno-testnet-api.polkachu.com",
+        "provider": "Polkachu"
       }
     ],
     "grpc": [
+      {
+        "address": "juno-testnet-grpc.stakeandrelax.net:12690",
+        "provider": "Stake&Relax 🦥"
+      },
       {
         "address": "juno-testnet-grpc.polkachu.com:12690",
         "provider": "Polkachu"
@@ -99,8 +106,14 @@
   },
   "explorers": [
     {
-      "kind": "\ud83d\udd25STAVR\ud83d\udd25",
-      "url": "https://explorer.stavr.tech/Juno-Testnet",
+      "kind": "Stake&Relax 🦥",
+      "url": "https://testnet.explorer.stakeandrelax.net/juno",
+      "tx_page": "https://testnet.explorer.stakeandrelax.net/juno/tx/${txHash}",
+      "account_page": "https://testnet.explorer.stakeandrelax.net/juno/account/${accountAddress}"
+    },
+    {
+      "kind": "Stakeflow",
+      "url": "https://stakeflow.io/juno-testnet",
       "tx_page": "https://explorer.stavr.tech/Juno-Testnet/txs/${txHash}",
       "account_page": "https://explorer.stavr.tech/Juno-Testnet/account/${accountAddress}"
     }
