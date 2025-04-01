@@ -3,78 +3,28 @@
   "chain_name": "junotestnet",
   "versions": [
     {
-      "name": "v13",
-      "recommended_version": "v13.0.0-beta.1",
+      "name": "v27",
+      "recommended_version": "v27.0.0",
       "compatible_versions": [
-        "v13.0.0-beta.1"
+        "v27.0.0"
       ],
       "consensus": {
         "type": "tendermint",
-        "version": "0.34"
+        "version": "0.37.8"
       },
       "sdk": {
         "type": "cosmos",
-        "version": "0.45"
-      },
-      "cosmwasm": {
-        "version": "0.30",
-        "enabled": true
+        "version": "0.47.15"
       },
       "ibc": {
         "type": "go",
-        "version": "4.3.0"
-      },
-      "next_version_name": "v14"
-    },
-    {
-      "name": "v14",
-      "recommended_version": "v14.0.0-alpha.1",
-      "compatible_versions": [
-        "v14.0.0-alpha.1"
-      ],
-      "consensus": {
-        "type": "tendermint",
-        "version": "0.34"
-      },
-      "sdk": {
-        "type": "cosmos",
-        "version": "0.45"
+        "version": "1.22.5"
       },
       "cosmwasm": {
-        "version": "0.30",
+        "version": "0.46",
         "enabled": true
       },
-      "ibc": {
-        "type": "go",
-        "version": "4.3.0"
-      },
-      "previous_version_name": "v13",
-      "next_version_name": "v15"
-    },
-    {
-      "name": "v15",
-      "recommended_version": "v15.0.0-alpha.2",
-      "compatible_versions": [
-        "v15.0.0",
-        "v15.0.0-alpha.2"
-      ],
-      "consensus": {
-        "type": "tendermint",
-        "version": "0.34"
-      },
-      "sdk": {
-        "type": "cosmos",
-        "version": "0.45"
-      },
-      "ibc": {
-        "type": "go",
-        "version": "4.3.1"
-      },
-      "cosmwasm": {
-        "version": "0.31",
-        "enabled": true
-      },
-      "previous_version_name": "v14",
+      "previous_version_name": "",
       "next_version_name": ""
     }
   ]
